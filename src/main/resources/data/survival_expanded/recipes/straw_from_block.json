@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "survival_expanded:straw_block"
+    }
+  ],
+  "result": {
+    "item": "survival_expanded:straw",
+    "count": 9
+  }
+}

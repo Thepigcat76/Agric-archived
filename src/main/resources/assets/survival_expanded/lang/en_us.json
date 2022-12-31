@@ -1,4 +1,9 @@
 {
   "item.survival_expanded.straw": "Straw",
-  "block.survival_expanded.straw_block": "Straw Bale"
+  "item.survival_expanded.rye_seeds": "Rye Seeds",
+
+  "block.survival_expanded.straw_block": "Straw Bale",
+  "block.survival_expanded.rye_block": "Rye Bale",
+
+  "itemGroup.survival_expanded": "Survival Expanded"
 }
