@@ -1,4 +1,4 @@
-package net.thepigcat76.survival_expanded.block;
+package net.thepigcat76.survival_expanded.block.crops;
 
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
@@ -6,18 +6,18 @@ import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import net.thepigcat76.survival_expanded.ModItems.ModItems;
+import net.thepigcat76.survival_expanded.item.ModItems;
 
-public class RyeCrop extends CropBlock {
-    public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 7);
+public class CottonCrop extends CropBlock {
+    public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 4);
 
-    public RyeCrop(Properties properties) {
+    public CottonCrop(Properties properties) {
         super(properties);
     }
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return ModItems.RYE_SEEDS.get();
+        return ModItems.COTTON_SEEDS.get();
     }
 
     @Override
@@ -27,7 +27,7 @@ public class RyeCrop extends CropBlock {
 
     @Override
     public int getMaxAge() {
-        return 7;
+        return 4;
     }
 
     @Override

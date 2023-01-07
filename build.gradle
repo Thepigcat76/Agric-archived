@@ -7,7 +7,7 @@ group = 'net.thepigcat76'
 version = '1.0-SNAPSHOT'
 
 java {
-    archivesBaseName = 'survival_expanded'
+    archivesBaseName = 'agric'
     toolchain.languageVersion = JavaLanguageVersion.of(17)
 }
 

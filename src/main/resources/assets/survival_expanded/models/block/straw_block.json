@@ -1,5 +1,5 @@
 {
-  "parent": "block/cube_all",
+  "parent": "block/column",
   "textures": {
     "all": "survival_expanded:block/straw_block_side"
   }

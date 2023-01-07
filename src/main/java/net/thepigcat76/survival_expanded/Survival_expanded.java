@@ -11,13 +11,13 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.thepigcat76.survival_expanded.block.ModBlocks;
-import net.thepigcat76.survival_expanded.ModItems.ModItems;
+import net.thepigcat76.survival_expanded.item.ModItems;
 import org.slf4j.Logger;
 
 @Mod(Survival_expanded.MODID)
 public class Survival_expanded {
 
-    public static final String MODID = "survival_expanded";
+    public static final String MODID = "agric";
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public Survival_expanded() {
@@ -38,6 +38,7 @@ public class Survival_expanded {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.RYE_CROP.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.COTTON_CROP.get(), RenderType.cutout());
         }
     }
 }

@@ -11,9 +11,10 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import net.thepigcat76.survival_expanded.ModItems.ModCreativeTab;
-import net.thepigcat76.survival_expanded.ModItems.ModItems;
+import net.thepigcat76.survival_expanded.item.ModCreativeTab;
+import net.thepigcat76.survival_expanded.item.ModItems;
 import net.thepigcat76.survival_expanded.Survival_expanded;
+import net.thepigcat76.survival_expanded.block.crops.RyeCrop;
 
 import java.util.function.Supplier;
 
@@ -29,11 +30,15 @@ public class ModBlocks {
     public static final RegistryObject<Block> RYE_CROP= BLOCKS.register("rye_crop", () -> new RyeCrop(BlockBehaviour.Properties.copy(Blocks.WHEAT)
             .strength(2f)));
 
+    public static final RegistryObject<Block> COTTON_CROP= BLOCKS.register("rye_crop", () -> new RyeCrop(BlockBehaviour.Properties.copy(Blocks.WHEAT)
+            .strength(2f)));
+
         private static <T extends Block>RegistryObject<T> registerBlock(String  name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);
         return toReturn;
         }
+
 
         private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
 
