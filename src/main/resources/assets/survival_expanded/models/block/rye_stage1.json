@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/crop",
-  "render_type": "cutout",
-  "textures": {
-    "crop": "survival_expanded:block/rye_stage1"
-  }
-}
