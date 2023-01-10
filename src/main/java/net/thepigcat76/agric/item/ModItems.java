@@ -12,18 +12,39 @@ import net.minecraftforge.registries.RegistryObject;
 import net.thepigcat76.agric.Agric;
 import net.thepigcat76.agric.block.ModBlocks;
 
+import static net.thepigcat76.agric.Agric.MODID;
+
 public class ModItems {
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Agric.MODID);
+    public static final DeferredRegister<Item> MOD_ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
 
-    public static final RegistryObject<Item> STRAW = ITEMS.register("straw", () -> new Item(new Item.Properties().tab(ModCreativeTab.AGRIC)));
-    public static final RegistryObject<Item> RYE_SEEDS = ITEMS.register("rye_seeds", () -> new ItemNameBlockItem(ModBlocks.RYE_CROP.get(), new Item.Properties().tab(ModCreativeTab.AGRIC)));
-    public static final RegistryObject<Item> COTTON_SEEDS = ITEMS.register("cotton_seeds", () -> new ItemNameBlockItem(ModBlocks.COTTON_CROP.get(), new Item.Properties().tab(ModCreativeTab.AGRIC)));
-    public static final RegistryObject<Item> RYE = ITEMS.register("rye", () -> new Item(new Item.Properties().tab(ModCreativeTab.AGRIC).food(new FoodProperties.Builder().nutrition(1).build())));
-    public static final RegistryObject<Item> BLUEBERRIES = ITEMS.register("blueberries", () -> new Item(new Item.Properties().tab(ModCreativeTab.AGRIC).food(new FoodProperties.Builder().nutrition(1).effect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, 60, 0), 1f).build())));
-    public static final RegistryObject<Item> COTTON = ITEMS.register("cotton", () -> new Item(new Item.Properties().tab(ModCreativeTab.AGRIC)));
-    public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry", () -> new ItemNameBlockItem(ModBlocks.STRAWBERRY_BUSH.get(), new Item.Properties().tab(ModCreativeTab.AGRIC).food(new FoodProperties.Builder().nutrition(1).effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 60, 0), 1f).build())));
+    public static final RegistryObject<Item> STRAW = MOD_ITEMS.register("straw",
+            () -> new Item(new Item.Properties().tab(ModCreativeTab.AGRIC)));
 
-    public static void register(IEventBus eventBus) {
-        ITEMS.register(eventBus);
-    }
+    public static final RegistryObject<Item> RYE_SEEDS = MOD_ITEMS.register("rye_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.RYE_CROP.get(),
+                    new Item.Properties().tab(ModCreativeTab.AGRIC)));
+
+    public static final RegistryObject<Item> COTTON_SEEDS = MOD_ITEMS.register("cotton_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.COTTON_CROP.get(),
+                    new Item.Properties().tab(ModCreativeTab.AGRIC)));
+
+    public static final RegistryObject<Item> RYE = MOD_ITEMS.register("rye",
+            () -> new Item(new Item.Properties().tab(ModCreativeTab.AGRIC)
+                    .food(new FoodProperties.Builder().nutrition(1).build())));
+
+    public static final RegistryObject<Item> BLUEBERRIES = MOD_ITEMS.register("blueberry",
+            () -> new Item(new Item.Properties().tab(ModCreativeTab.AGRIC)
+                    .food(new FoodProperties.Builder().nutrition(1).effect(
+            () -> new MobEffectInstance(MobEffects.NIGHT_VISION, 60, 0), 1f).build())));
+
+    public static final RegistryObject<Item> COTTON = MOD_ITEMS.register("cotton",
+            () -> new Item(new Item.Properties().tab(ModCreativeTab.AGRIC)));
+
+    public static final RegistryObject<Item> STRAWBERRY = MOD_ITEMS.register("strawberry",
+            () -> new ItemNameBlockItem(ModBlocks.STRAWBERRY_BUSH.get(), new Item.Properties()
+                    .tab(ModCreativeTab.AGRIC).food(new FoodProperties.Builder().nutrition(1) .effect(
+            () -> new MobEffectInstance(MobEffects.REGENERATION, 60, 0), 1f).build())));
+
+
+    public static void register(IEventBus eventBus) { MOD_ITEMS.register(eventBus); }
 }
