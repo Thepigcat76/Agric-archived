@@ -37,8 +37,6 @@ public class Agric {
 
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.RYE_CROP.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.COTTON_CROP.get(), RenderType.cutout());
         }
     }
 }
