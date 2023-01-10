@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "survival_expanded:straw"
+      "item": "agric:straw"
     }
   },
   "result": {
-    "item": "survival_expanded:straw_block"
+    "item": "agric:straw_block"
   }
 }
