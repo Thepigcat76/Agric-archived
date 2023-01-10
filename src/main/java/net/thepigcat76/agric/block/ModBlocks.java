@@ -60,7 +60,7 @@ public class ModBlocks {
         ModItems.MOD_ITEMS.register(name, () -> new BlockItem(block.get(),
                 new Item.Properties().tab(tab)));
         }
-        
+
     public static void register (IEventBus eventBus) {
         MOD_BLOCKS.register(eventBus);
     }
