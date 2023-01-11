@@ -1,5 +1,8 @@
 package net.thepigcat76.agric;
 
+import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -9,14 +12,13 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.thepigcat76.agric.block.ModBlocks;
 import net.thepigcat76.agric.item.ModItems;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
 
 @Mod(Agric.MODID)
 public class Agric {
 
     public static final String MODID = "agric";
-    private static final Logger LOGGER = LogManager.getLogger(Agric.class);
+    private static final Logger LOGGER = LogUtils.getLogger();
 
     public Agric() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
