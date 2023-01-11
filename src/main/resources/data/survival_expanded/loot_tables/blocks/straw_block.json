@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "survival_expanded:straw_block"
+          "name": "agric:straw_block"
         }
       ]
     }
